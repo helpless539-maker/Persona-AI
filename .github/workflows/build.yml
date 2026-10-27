@@ -1,4 +1,7 @@
-
+- name: Set Java target to 17
+          run: |
+            sed -i 's/JVM_1_8/JVM_17/g' persona_ai_android_project/app/build.gradle
+            sed -i 's/jvmTarget = "1.8"/jvmTarget = "17"/g' persona_ai_android_project/app/build.gradle
 name: Build Persona AI APK
 
 on:
